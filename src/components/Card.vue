@@ -33,11 +33,11 @@ export default {
 <style lang="scss" scoped>
 .card {
     position: relative;
-    width: 25%;
     max-width: 250px;
     overflow: hidden;
     padding: 0;
     border-radius: 5px;
+    margin-bottom: 50px;
 }
 .card__img img{
     display: block;
@@ -46,7 +46,7 @@ export default {
     object-fit: cover;
 }
 .card__sale{
-    width: 65px;
+    width: 80px;
     background: #BE131B;
     position: absolute;
     color: #eee;
@@ -83,26 +83,6 @@ export default {
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
 }
-// .card__sale-left{
-//     display: block;
-//     width: 10px;
-//     height: 40px;
-//     background: #BE131B;
-//     position: absolute;
-//     left: -10px;
-//     top: 0;
-// }
-// .card__sale-left:after{
-//     content: "";
-//     position: absolute;
-//     top: 30px;
-//     left: -10px;
-//     border: 10px solid transparent;
-//     border-top: 10px solid transparent;
-//     border-bottom: 10px solid transparent;
-//     border-left: 10px solid transparent;
-//     border-right: 10px solid #BE131B;
-// }
 .card__heartbox {
     position: absolute;
     width: 33px;
@@ -124,9 +104,9 @@ export default {
     margin: 0 10px;
     position: relative;
     top: 2px;
-    left: -7px;
+    left: -6px;
     transform: rotate(-45deg);
-    width: 10px;
+    width: 13px;
 }
 
 .card__like:before,
@@ -140,12 +120,12 @@ export default {
 }
 
 .card__like:before {
-    left: 6px;
-    top: -1px;
+    left: 5px;
+    top: -4px;
 }
 
 .card__like:after {
-    top: -10px;
+    top: -11px;
     left: -2px;
 }
 .card__text {

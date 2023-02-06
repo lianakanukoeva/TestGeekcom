@@ -1,7 +1,9 @@
 <template>
     <UInput :input_title="title">
-        <input type="text" name="from" id="" placeholder="от"> | 
-        <input type="text" name="to" id="" placeholder="до">
+        <div class="inputs">
+            <input type="text" name="from" id="" placeholder="от"> | 
+            <input type="text" name="to" id="" placeholder="до">
+        </div>
     </UInput>
 </template>
 
@@ -18,9 +20,17 @@ export default {
 </script>
 
 <style scoped>
+.inputs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+}
 input{
     position: relative;
-    max-width: 45%;
+    display: block;
+    max-width: 47%;
+    padding: 10px;
     border: 0;
     outline: 0;
 }

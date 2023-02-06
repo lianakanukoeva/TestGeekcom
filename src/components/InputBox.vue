@@ -20,6 +20,7 @@ export default {
 input{
     position: relative;
     max-width: 100%;
+    padding: 10px;
     border: 0;
     outline: 0;
 }
