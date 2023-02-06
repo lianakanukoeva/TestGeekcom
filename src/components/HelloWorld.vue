@@ -28,7 +28,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"
@@ -36,7 +36,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"
@@ -44,7 +44,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"
@@ -52,7 +52,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"
@@ -60,7 +60,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"
@@ -68,7 +68,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"
@@ -76,7 +76,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"
@@ -84,7 +84,7 @@ export default {
           {
               sale: "Скидка 6%",
               img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
-              flat: "1-комню квартира 26.3 m2",
+              flat: "1-комню квартира 26.3 м²",
               area: "ЖК Белые Росы",
               price: "1 118 000 ₽",
               address: "ул. Карамзина Семеновская"

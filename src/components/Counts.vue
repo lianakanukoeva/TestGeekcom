@@ -47,7 +47,6 @@ export default {
     &:hover {
         animation: count 1s;
         cursor: pointer;
-        // transform: scale(1.2);
     }
 }
 @keyframes count

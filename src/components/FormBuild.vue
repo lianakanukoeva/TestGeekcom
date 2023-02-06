@@ -3,13 +3,16 @@
         <div class="form_build__wrapper">
             <div class="form_build__inputs">
                 <Counts title="Количество комнат" />
-                <FromTo title="Площадь, м" />
+                <FromTo title="Площадь, м&#178;" />
                 <FromTo title="Стоимость, ₽" />
+            </div>
+            <div class="form_build__inputs">
                 <Selected title="Новостройка" :option_list="city" />
                 <Selected title="Район" :option_list="area" />
                 <InputBox title="Срок сдачи" />
             </div>
             <div class="form_build__btns">
+                <BtnCln />
                 <Btn />
             </div>
         </div>
@@ -21,6 +24,7 @@ import FromTo from '@/components/FromTo'
 import Selected from '@/components/Selected'
 import InputBox from '@/components/InputBox'
 import Btn from '@/components/Btn'
+import BtnCln from '@/components/BtnCln'
 import Counts from '@/components/Counts'
 export default {
     name: 'FromBuild',
@@ -29,6 +33,7 @@ export default {
         Selected,
         InputBox,
         Btn,
+        BtnCln,
         Counts
     },
     data() {
@@ -88,7 +93,7 @@ export default {
     background-color: #fff;
     padding: 50px;
     &__wrapper{
-        width: 70%;
+        width: 60%;
         margin: 0 auto;
     }
     &__inputs {
@@ -98,6 +103,9 @@ export default {
     }
     &__btns{
         margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 }
 </style>

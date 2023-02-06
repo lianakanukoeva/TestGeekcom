@@ -4,7 +4,9 @@
             <img :src="require(`@/assets/${img}`)" alt="">
             <div class="card__sale">{{ sale }}</div>
             <span class="card__sale-left"></span>
-            <button class="card__heartbox">
+            <button class="card__heartbox" 
+                :class="{ active: isActive }"
+                @click = "classToggle">
                 <div class="card__like"></div>
             </button>
         </div>
@@ -26,6 +28,16 @@ export default {
         area: String,
         price: String,
         address: String
+    },
+    data() {
+        return {
+            isActive: false
+        }
+    },
+    methods: {
+        classToggle(){
+            this.isActive = !this.isActive;
+        }
     }
 }
 </script>
@@ -38,6 +50,16 @@ export default {
     padding: 0;
     border-radius: 5px;
     margin-bottom: 50px;
+    cursor: pointer;
+    &:hover {
+        transition: 0.5s;
+        box-shadow: 0px 5px 15px 5px #ccc;
+        transform: scale(1.02);
+        .card__sale {
+            transition: 0.5s;
+            left: 0%;
+        }
+    }
 }
 .card__img img{
     display: block;
@@ -53,7 +75,7 @@ export default {
     padding: 5px;
     font-size: 12px;
     top: 10%;
-    left: 0;
+    left: -30%;
 }
 .card__sale:after{
     content: "";
@@ -94,9 +116,36 @@ export default {
     cursor: pointer;
     top: 10px;
     right: 10px;
+    &:hover {
+        animation: heartbeat 0.6s;
+        .card__like {
+            transition: 1s;
+            background-color: #cc5d62;
+            border: 2px solid #cc5d62;
+        }
+        .card__like:before,
+        .card__like:after {
+            transition: 1s;
+            background-color: #cc5d62;
+        }
+    }
+}
+.card__heartbox.active {
+    .card__like {
+        transition: 1s;
+        background-color: #BE131B;
+        border: 2px solid #BE131B;
+    }
+    .card__like:before,
+    .card__like:after {
+        transition: 1s;
+        background-color: #BE131B;
+    }
+    &:hover {
+        animation: 0;
+    }
 }
 .card__like {
-    animation: heartbeat 1s;
     background-color: #ccc;
     border: 2px solid #ccc;
     display: inline-block;
@@ -145,17 +194,14 @@ export default {
     0%
     {
         transform: scale( 1 )
-        rotate(-45deg);    
     }
     20%
     {
         transform: scale( 1.25 )
-        rotate(-45deg);  
     }
     40%
     {
         transform: scale( 1.5 )
-        rotate(-45deg);
     }
 }
 </style>
