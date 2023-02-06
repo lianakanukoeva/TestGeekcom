@@ -1,44 +1,95 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <FormBuild />
+    <div class="cards">
+      <Card v-for="(item, k) in card" 
+        :key="k"
+        :sale="item.sale"
+        :img="item.img"
+        :flat="item.flat"
+        :area="item.area"
+        :price="item.price"
+        :address="item.address"  />
+    </div>
   </div>
 </template>
 
 <script>
+import FormBuild from '@/components/FormBuild'
+import Card from '@/components/Card'
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  components: {
+    FormBuild,
+    Card
+  },
+  data() {
+    return {
+      card: [
+          {
+              sale: "Скидка 6%",
+              img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
+              flat: "1-комню квартира 26.3 m2",
+              area: "ЖК Белые Росы",
+              price: "1 118 000 ₽",
+              address: "ул. Карамзина Семеновская"
+          },
+          {
+              sale: "Скидка 6%",
+              img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
+              flat: "1-комню квартира 26.3 m2",
+              area: "ЖК Белые Росы",
+              price: "1 118 000 ₽",
+              address: "ул. Карамзина Семеновская"
+          },
+          {
+              sale: "Скидка 6%",
+              img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
+              flat: "1-комню квартира 26.3 m2",
+              area: "ЖК Белые Росы",
+              price: "1 118 000 ₽",
+              address: "ул. Карамзина Семеновская"
+          },
+          {
+              sale: "Скидка 6%",
+              img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
+              flat: "1-комню квартира 26.3 m2",
+              area: "ЖК Белые Росы",
+              price: "1 118 000 ₽",
+              address: "ул. Карамзина Семеновская"
+          },
+          {
+              sale: "Скидка 6%",
+              img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
+              flat: "1-комню квартира 26.3 m2",
+              area: "ЖК Белые Росы",
+              price: "1 118 000 ₽",
+              address: "ул. Карамзина Семеновская"
+          },
+          {
+              sale: "Скидка 6%",
+              img: "yaroslavskiy-mytishci-jk-1471684959-7.jpg",
+              flat: "1-комню квартира 26.3 m2",
+              area: "ЖК Белые Росы",
+              price: "1 118 000 ₽",
+              address: "ул. Карамзина Семеновская"
+          },
+      ],
+    }
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 h3 {
   margin: 40px 0 0;
 }
