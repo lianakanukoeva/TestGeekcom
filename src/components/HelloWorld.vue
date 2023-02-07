@@ -99,6 +99,8 @@ export default {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 90%;
+    margin: 0 auto;
   padding: 50px 50px 0 50px;
 }
 </style>
