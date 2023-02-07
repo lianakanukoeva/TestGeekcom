@@ -1,8 +1,12 @@
 <template>
     <UInput :input_title="title">
         <div class="counts">
-            <div class="count" v-for="(item, k) in counts" :key="k">
-                {{item}}
+            <div class="count"
+                v-for="(item, k) in counts" :key="k"
+                :class="{'active' : activeEl===item && isActive==true}"
+                @click="(activeEl=item) && (isActive = !isActive)">
+                <input type="checkbox" id="count">
+                <label for="count">{{item}}</label>
             </div>
         </div>
     </UInput>
@@ -19,9 +23,11 @@ export default {
     },
     data(){
         return{
-            counts: ["студия","1","2","3","4+"]
+            counts: ["студия","1","2","3","4+"],
+            activeEl: "",
+            isActive: false
         }
-    }
+    },
 }
 </script>
 
@@ -41,30 +47,43 @@ export default {
     line-height: 1;
     text-align: center;
     word-break: break-all;
+    cursor: pointer;
+    input[type="checkbox"]:checked, 
+    input[type="checkbox"]:not(:checked), 
+    input[type="radio"]:checked, 
+    input[type="radio"]:not(:checked) 
+    {
+        position: absolute;
+        left: -9999px;
+    }
+    label {
+        cursor: pointer;
+        &:hover {
+            animation: count 1s;
+        }
+    }
     &:last-child {
         border-right: 0;
     }
-    &:hover {
-        animation: count 1s;
-        cursor: pointer;
-    }
+}
+.count.active{
+    transition: 1s;
+    color: #fff;
+    background-color: #BE131B;
 }
 @keyframes count
 {
     0%
     {
         transform: scale( 1 );
-        color: #000;
     }
     20%
     {
-            transform: scale( 1.15 );
-        color: #000;
+        transform: scale( 1.15 );
     }
     40%
     {
         transform: scale( 1.2 );
-        color: #000;
     }
 }
 </style>

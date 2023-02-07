@@ -1,6 +1,6 @@
 <template>
     <div class="btn-clean">
-        <button type="">
+        <button type="reset">
             <span class="left"></span>
             <span class="right"></span>
             <div>
